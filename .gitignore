@@ -1,0 +1,30 @@
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+.DS_Store
+
+# IDEs
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# enterprise projects must not go on github!
+enterprise/
+camunda-license.txt
+
+# gradle
+gradlew
+gradlew.bat
+.gradle
+build
+out
+/camunda-bpm-spring-boot-example-gradle/gradle/
