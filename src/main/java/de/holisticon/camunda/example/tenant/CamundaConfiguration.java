@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @author Jo Ehm (Holisticon)
  */
 @Configuration
-public class CamundaConfiguratiuon {
+public class CamundaConfiguration {
 
     @Bean
     public ProcessEnginePlugin processEnginePlugin() {

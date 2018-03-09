@@ -30,7 +30,7 @@ public class AuthenticatedUserTenantIdProvider implements TenantIdProvider {
         return getTenantIdOfCurrentAuthentication();
     }
 
-    protected String getTenantIdOfCurrentAuthentication() {
+    private String getTenantIdOfCurrentAuthentication() {
 
         IdentityService identityService = Context.getProcessEngineConfiguration().getIdentityService();
         Authentication currentAuthentication = identityService.getCurrentAuthentication();

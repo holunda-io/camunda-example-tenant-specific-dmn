@@ -1,6 +1,5 @@
 package de.holisticon.camunda.example.tenant;
 
-import lombok.RequiredArgsConstructor;
 import org.camunda.bpm.engine.RepositoryService;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.repository.DecisionDefinition;
@@ -11,10 +10,13 @@ import org.springframework.stereotype.Component;
  * @author Jo Ehm (Holisticon)
  */
 @Component
-@RequiredArgsConstructor
 public class CalledDecisionTenantIdProvider {
 
     private final RepositoryService repositoryService;
+
+    public CalledDecisionTenantIdProvider(RepositoryService repositoryService) {
+        this.repositoryService = repositoryService;
+    }
 
     public String resolveTenantId(DelegateExecution execution) {
 

@@ -11,8 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableProcessApplication
 public class DigitsProcessApplication {
 
-  public static void main(final String... args) throws Exception {
-    SpringApplication.run(DigitsProcessApplication.class, args);
-  }
-
+    public static void main(final String... args) {
+        SpringApplication.run(DigitsProcessApplication.class, args);
+    }
 }
