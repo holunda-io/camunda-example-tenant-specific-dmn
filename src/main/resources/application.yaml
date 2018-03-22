@@ -6,10 +6,8 @@ camunda:
     history-level: full
     id-generator: simple
     database:
-      schema-update: drop-create
+      schema-update: false
       type: h2
-    admin-user:
-      id: admin
 
 spring.h2.console.enabled: true
 
@@ -17,3 +15,8 @@ spring:
   jpa:
     generate-ddl: false
     hibernate.ddl-auto: validate
+
+flyway:
+  enabled: true
+  locations: "classpath:db"
+
