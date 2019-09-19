@@ -1,8 +1,8 @@
 package de.holisticon.camunda.example.tenant;
 
-import org.camunda.bpm.engine.ProcessEngine;
-import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.camunda.bpm.engine.impl.cfg.ProcessEnginePlugin;
+import org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration;
+import org.camunda.bpm.spring.boot.starter.util.SpringBootProcessEnginePlugin;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,22 +14,11 @@ public class CamundaConfiguration {
 
     @Bean
     public ProcessEnginePlugin processEnginePlugin() {
-
-        return new ProcessEnginePlugin() {
+        return new SpringBootProcessEnginePlugin() {
 
             @Override
-            public void preInit(ProcessEngineConfigurationImpl processEngineConfiguration) {
+            public void preInit(SpringProcessEngineConfiguration processEngineConfiguration) {
                 processEngineConfiguration.setTenantIdProvider(new AuthenticatedUserTenantIdProvider());
-            }
-
-            @Override
-            public void postInit(ProcessEngineConfigurationImpl processEngineConfiguration) {
-
-            }
-
-            @Override
-            public void postProcessEngineBuild(ProcessEngine processEngine) {
-
             }
         };
     }
