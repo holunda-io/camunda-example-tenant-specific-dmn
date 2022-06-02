@@ -1,5 +1,8 @@
 ## Tenant-specific DMN tables
 
+[![example](https://img.shields.io/badge/lifecycle-EXAMPLE-blue.svg)](https://github.com/holisticon#open-source-lifecycle)
+[![unmaintained](https://img.shields.io/badge/lifecycle-UNMAINTAINED-red.svg)](https://github.com/holisticon#unmaintained)
+
 This example shows how to...
 
 * do tenant-specific deployments for DMN tables (see `META-INF/processes.xml`)
